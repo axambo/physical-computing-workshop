@@ -10,11 +10,13 @@
 *.acr
 *.alg
 *.bbl
+*.bcf
 *.blg
 *.tui
 *.top
 *.tmp
 *.mp
+*.nav
 *.dvi
 *.glg
 *.gls
@@ -28,6 +30,8 @@
 *.out
 *.synctex.gz
 *.synctex
+*.xml
+*.snm
 
 # Mac IDE files
 *.swp
