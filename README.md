@@ -8,8 +8,8 @@ The exercises and slides for the Physical Computing Workshop delivered at the [M
 
 ### Day 1: Intuitive Circuits and Hacking
 
-* [Slides](exercises/02-d1/)
-* [Code Exercises](slides/02-d1/) 
+* [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides)
+* [Code Exercises](https://github.com/axambo/physical-computing-workshop/tree/master/exercises)
 
 ### Day 2: Sensors and Actuators in Our Pockets
 
