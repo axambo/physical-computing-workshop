@@ -1,0 +1,44 @@
+<!-- code adapted from:
+https://security.love/AccelerometerAPI/
+http://www.albertosarullo.com/demos/accelerometer/
+-->
+
+<html>
+	<head>
+		<title>Accelerometer Javascript Test</title>
+	</head>
+
+	<style>
+	body {
+		font-family: helvetica, arial, sans serif;
+		font-size: 50px;
+	}
+	</style>
+
+	<div id="accel"></div>
+	<body>
+
+		<script>
+			window.addEventListener('devicemotion', function(event) {
+				var x, y, z;
+				x = event.accelerationIncludingGravity.x;
+				y = event.accelerationIncludingGravity.y;
+				z = event.accelerationIncludingGravity.z;
+        document.getElementById("accelerationX").innerHTML = x;
+		    document.getElementById("accelerationY").innerHTML = y;
+		    document.getElementById("accelerationZ").innerHTML = z;
+			});
+		</script>
+
+    <div id="content">
+    <h1>Accelerometer Javascript Test</h1>
+    <div id="sphere"></div>
+    <ul>
+	     <li>acceleration x: <span id="accelerationX"></span>g</li>
+	     <li>acceleration y: <span id="accelerationY"></span>g</li>
+	     <li>acceleration z: <span id="accelerationZ"></span>g</li>
+     </ul>
+
+	</body>
+
+</html>
