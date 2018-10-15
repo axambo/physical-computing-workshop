@@ -6,12 +6,17 @@ The exercises and slides for the Physical Computing Workshop delivered at the [M
 
 ## Table of Contents
 
+* [Introduction to the course](https://github.com/axambo/physical-computing-workshop/tree/master/slides/01-PCW-intro)
+
 ### Day 1: Intuitive Circuits and Hacking
 
-* [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides)
-* [Code Exercises](https://github.com/axambo/physical-computing-workshop/tree/master/exercises)
+* [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides/02-d1)
+* [Code Exercises](https://github.com/axambo/physical-computing-workshop/tree/master/exercises/02-d1)
 
 ### Day 2: Sensors and Actuators in Our Pockets
+
+* [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides/03-d2)
+* [Code Exercises](https://github.com/axambo/physical-computing-workshop/tree/master/exercises/03-d2)
 
 ### Day 3: Big Data with Arduinos
 
