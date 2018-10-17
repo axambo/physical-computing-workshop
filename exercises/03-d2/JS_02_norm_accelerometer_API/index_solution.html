@@ -1,0 +1,63 @@
+<!-- code adapted from:
+https://security.love/AccelerometerAPI/
+http://www.albertosarullo.com/demos/accelerometer/
+-->
+
+<html>
+	<head>
+		<title>Accelerometer Javascript Test</title>
+	</head>
+
+	<style>
+	body {
+		font-family: helvetica, arial, sans serif;
+		font-size: 50px;
+	}
+	</style>
+
+	<div id="accel"></div>
+	<body>
+
+		<script>
+
+			var currentvalueX;
+			var maxX=0, minX=1;
+			var ncurrentvalueX;
+
+			window.addEventListener('devicemotion', function(event) {
+				var x, y, z;
+				x = event.accelerationIncludingGravity.x;
+				y = event.accelerationIncludingGravity.y;
+				z = event.accelerationIncludingGravity.z;
+
+				currentvalueX = Math.abs(x);
+        if(currentvalueX > maxX){
+          maxX = currentvalueX;
+        }
+        if(currentvalueX < minX){
+          minX = currentvalueX;
+        }
+        var ncurrentvalueX = normalize(currentvalueX, maxX, minX);
+
+        document.getElementById("accelerationX").innerHTML = ncurrentvalueX;
+		    document.getElementById("accelerationY").innerHTML = y;
+		    document.getElementById("accelerationZ").innerHTML = z;
+			});
+			function normalize(val, max, min) {
+				return (val - min) / (max - min);
+			}
+			// Total acceleration: Math.pow(Math.pow(x,2) + Math.pow(y,2) + Math.pow(z,2), 0.5)
+		</script>
+
+    <div id="content">
+    <h1>Accelerometer Javascript Test</h1>
+    <div id="sphere"></div>
+    <ul>
+	     <li>acceleration x: <span id="accelerationX"></span>g</li>
+	     <li>acceleration y: <span id="accelerationY"></span>g</li>
+	     <li>acceleration z: <span id="accelerationZ"></span>g</li>
+     </ul>
+
+	</body>
+
+</html>
