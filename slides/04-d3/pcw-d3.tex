@@ -1,0 +1,170 @@
+\documentclass[screen, aspectratio=43]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Use the NTNU-temaet for beamer 
+% \usetheme[style=ntnu|simple|vertical|horizontal, 
+%     language=bm|nn|en, 
+%     smalltitle, 
+%     city=all|trondheim|alesund|gjovik]{ntnu2017}
+\usetheme[style=ntnu,language=en]{ntnu2017}
+
+\usepackage[english]{babel}
+\usepackage[style=numeric,backend=biber,natbib=false,sorting=none]{biblatex}
+
+\title[PCW-d1]{Physical Computing Workshop: Day 3}
+\subtitle{Microcontrollers, APIs, sonification, and big data}
+\author[A. Xamb{\'o}]{Anna Xamb{\'o}}
+\institute[NTNU]{Department of Music, NTNU}
+\date{18 October 2018}
+%\date{} % To have an empty date
+
+\addbibresource{example.bib} % Add bibliography database
+
+% Set the reference style to numeric.
+% See here: http://tex.stackexchange.com/questions/68080/beamer-bibliography-icon
+\setbeamertemplate{bibliography item}[text] 
+
+% Set bibliography fonts to a small size.
+\renewcommand*{\bibfont}{\footnotesize}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Learning Outcomes}
+  \begin{itemize}
+    \item Get an overview of the possibilities of interaction in physical computing applied to music.
+    \item Identify the main characteristics of the Arduino board.
+    \item Explore the creation of interactive systems for music using the Arduino board.    
+    \item Get familiar with how web APIs work.
+    \item Be able to integrate data from web APIs to an Arduino program.
+    \item Explore mappings from big data to sound.
+    \item Be able to adapt javascript and Arduino code to a custom-made musical instrument.     
+    \item Demonstrate a custom-made musical instrument in a performance setting.
+    \item Reflect on the custom-made musical instrument and performance using a blogging style.   
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{Preparation: Reading}
+        \begin{itemize}
+        \item Read / skim through the following article and be ready to discuss it in class:
+         \begin{itemize}
+         \item Collins, N., 2010. Interaction (chapter 6). In Introduction to Computer Music. Wiley. \\
+         \url{https://goo.gl/zor5gN}
+         \end{itemize}    
+         \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Preparation: What to Bring to Class?}
+        \begin{itemize}
+        \item Your own laptop.
+        \item Headphones / earplugs.
+         \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Preparation: What We Do Provide?}
+        \begin{itemize}
+        \item 7 Music Angel speakers for the performance per site.
+        \item 6 Arduino Kits per site.
+        \item Slides: \url{XX}.
+        \item Code: \url{XX}.
+        \item A handout: \url{XX}.        
+         \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Pre-knowledge Activity: Interaction}
+  Be ready to discuss topics related to interaction from the suggested reading.
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Outline}
+      \begin{itemize}
+	\item Block I: Getting familiar with the Arduino board
+	\item Block II: Basic interactive behavior activities: mappings from big data to sound
+	\item Block III: Rehearsal and performance
+    \end{itemize}  
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Exercise 1: Arduino as an IKEA kit and ``Hello, World!''}
+    \begin{itemize}
+    	\item Explore the content of the Arduino experimentation kit, ideally in pairs.
+	\item Follow the initial steps of the booklet: get familiar with the components and install the Arduino IDE software (page 3 of the booklet.
+	\item Have a close look at the breadboard.
+	\item Have a close look at the Arduino board and the types of pins.
+	\item The ``Hello, World!'' in Arduino: Blinking LED exercise (pages 8--9 of the booklet).
+    \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Exercise 2: Using a Pushbutton to Control the LED}
+    \begin{itemize}
+    	\item Follow the indications from the link.
+	%book / booklet
+    \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Exercise 3: Fade an LED}
+    \begin{itemize}
+    	\item Follow the indications from the link.
+	%book arduino
+    \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Exercise 4: Arduino 8-bit sound generation}
+    \begin{itemize}
+    	\item From blink to bee exercise (pages 7--9 from the [link]).
+	\item Playing tones (pages 9--10 from the link).
+	\item Arduino's tone library (pages 10--12 from the link).
+	\item Chained melodies (pages 12--14 from the link).
+	\item Converting sound to text (pages 16--17).
+    	\item (Optional) Follow the indications of the Music Piezo Elements exercise (pages 18--19).
+	%https://www.elektormagazine.com/files/attachment/331
+    \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Exercise 5: Serial output from P5.js}
+    \begin{itemize}
+    	\item Follow the instructions from the link.
+	%https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-output-from-p5-js/
+    \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Exercise 6: Visualize live sensor data with P5.js and an Arduino}
+    \begin{itemize}
+    	\item Follow the instructions from the link.
+	%https://publiclab.org/notes/warren/02-08-2018/visualize-live-sensor-data-with-p5js-and-an-arduino
+    \end{itemize}
+\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Resources: XX}
+%    \begin{itemize}
+%    	\item
+%    \end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Other Resources: Listening}
+%    \begin{itemize}
+%    	\item
+%    \end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{References}
+%  \printbibliography
+%\end{frame}
+
+\end{document}
