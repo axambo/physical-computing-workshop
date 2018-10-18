@@ -19,8 +19,6 @@ http://www.albertosarullo.com/demos/accelerometer/
 	<body>
 
 		<script>
-		  var time = 200;
-      window.navigator.vibrate(time);
 			window.addEventListener('devicemotion', function(event) {
 				var x, y, z;
 				x = event.accelerationIncludingGravity.x;

@@ -13,7 +13,8 @@
 \usepackage[style=numeric,backend=biber,natbib=false,sorting=none]{biblatex}
 
 \title[PCW-d1]{Physical Computing Workshop: Day 3}
-\subtitle{Microcontrollers, APIs, sonification, and big data}
+%\subtitle{Microcontrollers, APIs, sonification, and big data}
+\subtitle{Microcontrollers, tangible bits and chiptunes}
 \author[A. Xamb{\'o}]{Anna Xamb{\'o}}
 \institute[NTNU]{Department of Music, NTNU}
 \date{18 October 2018}
@@ -40,10 +41,12 @@
     \item Get an overview of the possibilities of interaction in physical computing applied to music.
     \item Identify the main characteristics of the Arduino board.
     \item Explore the creation of interactive systems for music using the Arduino board.    
-    \item Get familiar with how web APIs work.
-    \item Be able to integrate data from web APIs to an Arduino program.
-    \item Explore mappings from big data to sound.
-    \item Be able to adapt javascript and Arduino code to a custom-made musical instrument.     
+    %\item Get familiar with how web APIs work.
+    %\item Be able to integrate data from web APIs to an Arduino program.
+    %\item Explore mappings from big data to sound.
+    %\item Be able to adapt javascript and Arduino code to a custom-made musical instrument.   
+    \item Get familiar with the littleBits kit.
+    \item Be able to create a music patch with littleBits.
     \item Demonstrate a custom-made musical instrument in a performance setting.
     \item Reflect on the custom-made musical instrument and performance using a blogging style.   
   \end{itemize}
@@ -72,9 +75,9 @@
         \begin{itemize}
         \item 7 Music Angel speakers for the performance per site.
         \item 6 Arduino Kits per site.
-        \item Slides: \url{XX}.
-        \item Code: \url{XX}.
-        \item A handout: \url{XX}.        
+        \item Slides: \url{https://github.com/axambo/physical-computing-workshop/blob/master/slides/04-d3/pcw-d3.pdf}.
+        \item Code: \url{https://github.com/axambo/physical-computing-workshop/tree/master/exercises/04-d3}.
+        \item A handout: \url{https://github.com/axambo/physical-computing-workshop/blob/master/handouts/pcw-d3-handout.pdf}.        
          \end{itemize}
 \end{frame}
 %
@@ -87,78 +90,91 @@
   \frametitle{Outline}
       \begin{itemize}
 	\item Block I: Getting familiar with the Arduino board
-	\item Block II: Basic interactive behavior activities: mappings from big data to sound
+	%\item Block II: Basic interactive behavior activities: mappings from big data to sound
+	\item Block II: Basic interactive behavior activities: tangible bits
 	\item Block III: Rehearsal and performance
     \end{itemize}  
 \end{frame}
 %
 \begin{frame}
-  \frametitle{Exercise 1: Arduino as an IKEA kit and ``Hello, World!''}
+  \frametitle{Exercise 1: Arduino as an IKEA kit}
     \begin{itemize}
     	\item Explore the content of the Arduino experimentation kit, ideally in pairs.
 	\item Follow the initial steps of the booklet: get familiar with the components and install the Arduino IDE software (page 3 of the booklet.
-	\item Have a close look at the breadboard.
+	\item Have a close look at the breadboard.r
 	\item Have a close look at the Arduino board and the types of pins.
-	\item The ``Hello, World!'' in Arduino: Blinking LED exercise (pages 8--9 of the booklet).
     \end{itemize}
 \end{frame}
 %
 \begin{frame}
-  \frametitle{Exercise 2: Using a Pushbutton to Control the LED}
+  \frametitle{Exercise 2: ``Hello, World!''}
     \begin{itemize}
-    	\item Follow the indications from the link.
-	%book / booklet
+    	\item The ``Hello, World!'' in Arduino: Blinking LED exercise: 1) run the example from Arduino IDE (File>Examples>01.Basics>Blink) blinking the built-in LED, 2) plug an LED to 13, what happens? 3) create the circuit from CIRC-01 of the Arduino Kit (pages 8--9 of the booklet), which controls an LED in the breadboard.
     \end{itemize}
 \end{frame}
 %
 \begin{frame}
-  \frametitle{Exercise 3: Fade an LED}
+  \frametitle{Exercise 3: The piezo electric buzzer}
+  When applying a voltage to the contact mic or piezo buzzer, it will produce an audible click, due to the two inner discs (metallic and ceramic) repel each other.
     \begin{itemize}
-    	\item Follow the indications from the link.
-	%book arduino
+    	\item Create the circuit from CIRC-06 of the Arduino Kit (pages 18--19 of the booklet).
+	\item Run the code explained in page 7 from ``Arduino 8-bit sound generation'' (\url{https://www.elektormagazine.com/files/attachment/331}). Make sure that the pin number is correct. 
+	\item Explore different times. What happens if the delay is 1ms?
+	\item Try now the ``Bee'' program explained in page 9 of the same book.
     \end{itemize}
 \end{frame}
 %
 \begin{frame}
-  \frametitle{Exercise 4: Arduino 8-bit sound generation}
+  \frametitle{Exercise 4: Playing tones}
+  Arduino cannot imitate the sinusoidal shape perfectly. However, we can produce square waves by repeatedly switching a pin HIGH and LOW. Microcontrollers work with time (as opposed to frequency). We can define a particular frequency by defining the time period.
+	$p =  \dfrac{1}{440} = 0.002272 s = 2.272 ms = 2272  \mu s$
     \begin{itemize}
-    	\item From blink to bee exercise (pages 7--9 from the [link]).
-	\item Playing tones (pages 9--10 from the link).
-	\item Arduino's tone library (pages 10--12 from the link).
-	\item Chained melodies (pages 12--14 from the link).
-	\item Converting sound to text (pages 16--17).
-    	\item (Optional) Follow the indications of the Music Piezo Elements exercise (pages 18--19).
-	%https://www.elektormagazine.com/files/attachment/331
+    	\item Explore the different notes (C4--C5) provided in page 10 from ``Arduino 8-bit sound generation'' (\url{https://www.elektormagazine.com/files/attachment/331}). 
+	\item Challenge: Run the code from \url{https://www.arduino.cc/en/Tutorial/Melody} and change the melody.
     \end{itemize}
 \end{frame}
 %
 \begin{frame}
-  \frametitle{Exercise 5: Serial output from P5.js}
+  \frametitle{Exercise 5 (optional): Cloud computing with Arduino and P5.js}
+  Serial communication to a web page in a browser is possible, and thus we can communicate browser-based applications with Arduino! Here are some tutorials that are informative on how to proceed towards this direction.
     \begin{itemize}
-    	\item Follow the instructions from the link.
-	%https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-output-from-p5-js/
+    	\item Asynchronous serial communication: the basics: \url{https://itp.nyu.edu/physcomp/lessons/serial-communication/serial-communication-the-basics/}
+    	\item Serial input to P5.js: \url{https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-input-to-the-p5-js-ide/}
+	\item Serial output from P5.js: \url{https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-output-from-p5-js/}
+	%\item Serial communication with Arduiino + P5.js: \url{http://www.bonder.tech/2017/10/27/serial-communication-with-arduino-p5-js/}
+	%\item Visualize live sensor data with p5js and an Arduino: \url{https://publiclab.org/notes/warren/02-08-2018/visualize-live-sensor-data-with-p5js-and-an-arduino}
+	%\item Arduino livechart: \url{https://github.com/billroy/arduino-livechart}
     \end{itemize}
 \end{frame}
 %
 \begin{frame}
-  \frametitle{Exercise 6: Visualize live sensor data with P5.js and an Arduino}
+  \frametitle{Exercise 6: Chiptunes with litteBits}
     \begin{itemize}
-    	\item Follow the instructions from the link.
-	%https://publiclab.org/notes/warren/02-08-2018/visualize-live-sensor-data-with-p5js-and-an-arduino
+    	\item Explore the different pieces of litteBits, get familiar with the collection.
+	\item Build a music patch.
     \end{itemize}
 \end{frame}
 %
-%\begin{frame}
-%  \frametitle{Resources: XX}
-%    \begin{itemize}
-%    	\item
-%    \end{itemize}
-%\end{frame}
+\begin{frame}
+  \frametitle{Resources}
+    \begin{itemize}
+    	\item How to use a breadboard:\\
+	\url{https://youtu.be/6WReFkfrUIk}
+	\item How to use a resistor:\\
+	\url{https://www.youtube.com/watch?v=GLD7AgAYqwA}
+	\item An Introduction to the Arduino:\\
+	\url{https://www.youtube.com/watch?v=CqrQmQqpHXc}
+	\item What is an Arduino? (Arduino Uno pinout diagram included): \\
+	\url{https://learn.sparkfun.com/tutorials/what-is-an-arduino/all}
+	\item Serial Output From Arduino: 
+	\url{https://vimeo.com/237203208}
+    \end{itemize}
+\end{frame}
 %
 %\begin{frame}
 %  \frametitle{Other Resources: Listening}
 %    \begin{itemize}
-%    	\item
+%    	\item Add here the performance of littleBits
 %    \end{itemize}
 %\end{frame}
 %
