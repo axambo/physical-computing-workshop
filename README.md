@@ -18,12 +18,12 @@ The exercises and slides for the Physical Computing Workshop delivered at the [M
 * [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides/03-d2)
 * [Code Exercises](https://github.com/axambo/physical-computing-workshop/tree/master/exercises/03-d2)
 
-### Day 3: Big Data with Arduinos
+### Day 3: Microcontrollers, tangible bits and chiptunes
 
 * [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides/04-d3)
 * The links to the code are provided in the slides as we are using external examples.
 
-### Day 4: Mini-hackathon
+### Day 4: Mini-hackathon and the real world
 
 * [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides/05-d4)
 
