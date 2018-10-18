@@ -25,6 +25,8 @@ The exercises and slides for the Physical Computing Workshop delivered at the [M
 
 ### Day 4: Mini-hackathon
 
+* [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides/05-d4)
+
 ## License
 
 The [ISC License](http://opensource.org/licenses/ISC) Copyright (c) 2018 Anna Xambó
