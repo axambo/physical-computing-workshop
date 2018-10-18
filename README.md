@@ -20,6 +20,9 @@ The exercises and slides for the Physical Computing Workshop delivered at the [M
 
 ### Day 3: Big Data with Arduinos
 
+* [Slides](https://github.com/axambo/physical-computing-workshop/tree/master/slides/04-d3)
+* The links to the code are provided in the slides as we are using external examples.
+
 ### Day 4: Mini-hackathon
 
 ## License
